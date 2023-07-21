@@ -1,0 +1,34 @@
+//package com.dsa;
+
+public class bitmnuputalion_dsa {
+
+	public static void main(String[] args) {
+		
+		System.out.println(getBit(100110101,5));
+		
+		System.out.println(setBit(100110101,3));
+		
+		System.out.println(clearBit(100110101,4));
+		
+		
+
+	}
+	      
+	     // find bit i-th  bit
+		private static boolean  getBit(int n, int k) {
+		
+		return ((n&(1<<(k-1)))!=0);
+	}
+		// set bit i-th bit
+	private static int setBit(int i, int j) {
+		
+		return  i |(1<<j);
+	}
+	    // clear bit i-th bit
+    private static int clearBit(int s, int v) {
+	
+   	 int mask=~(1<<(v-1));
+	return  s & mask;
+}
+
+}
